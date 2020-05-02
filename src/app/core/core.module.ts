@@ -6,6 +6,7 @@ import {DogModule} from "../features/dog/dog.module";
 import {LoginModule} from "../features/login/login.module";
 import {HomeModule} from "../features/home/home.module";
 import {HttpClientModule} from "@angular/common/http";
+import {HumanModule} from "../features/human/human.module";
 
 @NgModule({
     declarations: [NavbarComponent],
@@ -15,7 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
         DogModule,
         LoginModule,
         HomeModule,
-        HttpClientModule
+        HttpClientModule,
+        HumanModule
     ],
     exports: [NavbarComponent]
 })

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpService} from "./http.service";
+import {HttpService} from "../http/http.service";
 import {Observable} from "rxjs";
-import {DogResponse} from "../model/dog-response";
+import {DogModel} from "../../model/dog-model";
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +9,7 @@ import {DogResponse} from "../model/dog-response";
 export class DogService extends HttpService {
     private static readonly DOG_URL: string = 'https://dog.ceo/api/breeds/image/random';
 
-    public fetchDogImage(): Observable<DogResponse> {
+    public fetchDogImage(): Observable<DogModel> {
         return this.get(DogService.DOG_URL);
     }
 }

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {DogService} from "../../service/dog.service";
-import {DogResponse} from "../../model/dog-response";
+import {DogService} from "../../service/dog/dog.service";
+import {DogModel} from "../../model/dog-model";
 
 @Component({
     selector: 'app-dog',
@@ -15,7 +15,7 @@ export class DogComponent {
     }
 
     loadDogImageUrl(): void {
-        this.dogService.fetchDogImage().subscribe((response: DogResponse) => {
+        this.dogService.fetchDogImage().subscribe((response: DogModel) => {
             this.dogImageUrl = response.message;
         })
     }

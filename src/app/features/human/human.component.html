@@ -1,0 +1,12 @@
+<div>Human info</div>
+<button style="display: block" (click)="loadHumanInfo()">Load</button>
+<ul>
+	<li *ngFor="let human of humans">
+		{{ human.id + " " + human.name }}
+	</li>
+</ul>
+<br>
+<br>
+<br>
+<button style="display: block" (click)="loadHumanName()">Load</button>
+<div>{{"human name: " + humanName}}</div>

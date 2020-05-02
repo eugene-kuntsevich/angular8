@@ -1,4 +1,4 @@
-export interface DogResponse {
+export interface DogModel {
     message:string;
     status:string;
 }
